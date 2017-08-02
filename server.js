@@ -9,8 +9,8 @@ const app = express();
 
 app.use(morgan('combined'));
 app.use('/v1', router);
+app.set('port', process.env.PORT || 3000);
 
-const server = app.listen(8000, () => {
-  const { address, port } = server.address();
-  console.log(`Listening at http://${address}:${port}`);
+const server = app.listen(app.get('port'), () => {
+  console.log('Node app is running on port ', app.get('port'));
 });
