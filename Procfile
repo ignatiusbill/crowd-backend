@@ -1,1 +1,1 @@
-web: nodemon -- node_modules/babel-cli/bin/babel-node server.js
+web: node -- node_modules/babel-cli/bin/babel-node server.js
